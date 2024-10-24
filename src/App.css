@@ -1,0 +1,232 @@
+input{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+div#main-content {
+  background-color: hsl(217, 100%, 97%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#main-content-box {
+  display: flex;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100%;
+  width: 75%;
+  max-height:700px !important;
+  max-width: 1000px !important;
+}
+div#main-content-left-side {
+  padding: 30px;
+}
+div#main-content-left-side-steps {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+span#main-content-left-side-steps-name {
+  display: block;
+}
+div#main-content-left-side{
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+  width: 30%;
+  border-radius: 10px;
+  background-size:cover ;
+}
+div.main-content-left-side-steps-counter {
+  border: 2px solid hsl(228, 100%, 84%);
+  padding: 14px 20px;
+  border-radius: 43px;
+  color: white;
+  font-weight: bold;
+
+}
+
+
+span#main-content-left-side-steps-name {
+  color: hsl(231, 11%, 63%);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+span#main-content-left-side-steps-title {
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+}
+div#main-content-right-side {padding: 20px 60px;width: 70%;}
+
+div#main-content-right-side form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 80%;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    font-size: 16px;
+    font-weight: bold;
+    color: hsl(213, 96%, 18%);
+}
+
+label {
+    width: 100%;
+    color: hsl(213, 96%, 18%);
+}
+
+input[type="submit"] {
+    margin: 0;
+    font-weight: bolder;
+    width: auto;
+    padding: 13px;
+    background: hsl(213, 96%, 18%);
+    color: white;
+    border: navajowhite;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+input[type="submit"]:hover{
+  background: hsl(243, 100%, 62%);
+}
+p.required-erore {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+h1 {
+    color: hsl(213, 96%, 18%);
+}
+
+div#main-content-right-side > p {
+    color: hsl(231, 11%, 63%);
+}
+
+input:focus { 
+  outline: none !important;
+  border-color: hsl(243, 100%, 62%);
+}
+
+div#back-sub-sec {
+  width: 100% !important;
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/******************/
+.radio-container {
+  display: flex;
+  margin-right: 20px;
+  cursor: pointer;
+  border: 2px solid  hsl(229, 24%, 87%);
+  border-radius: 10px;
+  transition: border 0.3s;
+  padding: 25px;
+  flex-direction: column;
+  min-height: 150px;
+  justify-content: space-between;
+}
+.radio-container input {
+  display: none; /* پنهان کردن رادیو پیش‌فرض */
+}
+
+.checkmark {
+  width: 50px; /* عرض تصویر */
+  height: 50px; /* ارتفاع تصویر */
+  border-radius: 10px; /* گرد کردن گوشه‌ها */
+  background-size: cover; /* تنظیم اندازه تصویر */
+  background-position: center; /* مرکز کردن تصویر */
+}
+
+.radio-container.active {
+  border: 2px solid hsl(243, 100%, 62%); 
+  background-color:  hsl(217, 100%, 97%);
+}
+
+.description {
+  margin-top: 5px; /* فاصله بین تصویر و متن */
+  font-size: 14px; /* اندازه فونت */
+  color: #333; /* رنگ متن */
+}
+form div {
+  width: 100%;
+}
+
+div#radio-plan {
+  display: flex;
+}
+/************************************/
+
+.toggle-slider {
+  position: relative;
+  width: 55px;
+  height: 28px;
+  margin: 0 20px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+
+input[type='checkbox']:checked + .slider:before {
+  transform: translateX(26px);
+}
+.toggle-slider-box {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  background: hsl(231, 100%, 99%);
+  padding: 15px 0px;
+}
+
+.toggle-slider-box h3 {
+  margin: 0;
+}
+
+/*******************************/
+.summary-box {
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
